@@ -303,6 +303,38 @@
         .social-links a:hover {
             transform: translateY(-3px);
         }
+        #certificates {
+                padding: 6rem 0;
+                background: #112240;
+            }
+
+            .certificate-gallery {
+                display: flex;
+                gap: 2rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .certificate-item {
+                background: #233554;
+                border-radius: 10px;
+                overflow: hidden;
+                max-width: 300px;
+                margin-bottom: 2rem;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .certificate-img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            #certificates h2 {
+                text-align: center;
+                color: #64ffda;
+                margin-bottom: 3rem;
+            }
     
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -366,6 +398,7 @@
                 <div class="nav-links">
                     <a href="#home">Home</a>
                     <a href="#works">Works</a>
+                    <a href="#certificates">Certificate</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                 </div>
@@ -473,6 +506,104 @@
                 </div>
             </main>
         </section>
+        <section id="certificates">
+            <div class="container">
+                <h2>Certificates</h2>
+                <div class="certificate-gallery">
+                    <div class="certificate-item">
+                        <a href="english_for_it.jpg" class="certificate-link" data-lightbox="certificate-gallery" title="English for IT 1">
+                            <img src="english_for_it.jpg" alt="English for IT 1" class="certificate-img">
+                        </a>
+                        <p class="certificate-title">English for IT 1</p>
+                    </div>
+                    <div class="certificate-item">
+                        <a href="data_analytics.jpg" class="certificate-link" data-lightbox="certificate-gallery" title="Data Analytics Essentials">
+                            <img src="data_analytics.jpg" alt="Data Analytics Essentials" class="certificate-img">
+                        </a>
+                        <p class="certificate-title">Data Analytics Essentials</p>
+                    </div>
+                    <div class="certificate-item">
+                        <a href="python.jpg" class="certificate-link" data-lightbox="certificate-gallery" title="Python Essentials 1">
+                            <img src="python.jpg" alt="Python Essentials 1" class="certificate-img">
+                        </a>
+                        <p class="certificate-title">Python Essentials 1</p>
+                    </div>
+                    <div class="certificate-item">
+                        <a href="intro_to_iot.jpg" class="certificate-link" data-lightbox="certificate-gallery" title="Introduction to IoT">
+                            <img src="intro_to_iot.jpg" alt="Introduction to IoT" class="certificate-img">
+                        </a>
+                        <p class="certificate-title">Introduction to IoT</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Include Lightbox library -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+        
+        <!-- Custom CSS for titles and layout -->
+        <style>
+            /* Certificates section */
+            .certificate-gallery {
+                display: flex; /* Flexbox for horizontal layout */
+                justify-content: space-between; /* Distribute space between items */
+                gap: 20px; /* Add spacing between certificates */
+                flex-wrap: wrap; /* Wrap to next line if there are too many items */
+            }
+        
+            .certificate-item {
+                width: 100%;
+                max-width: 350px; /* Increased max width for larger images */
+                text-align: center; /* Center-align the title below the image */
+            }
+        
+            .certificate-img {
+                width: 100%;
+                border-radius: 8px;
+                transition: transform 0.2s ease;
+            }
+        
+            .certificate-title {
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #ffffff; /* Text color */
+            }
+        
+            /* Hover effect on the images */
+            .certificate-img:hover {
+                transform: scale(1.05);
+            }
+        
+            /* Style for lightbox caption/title */
+            .lightbox .lb-caption {
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 10px;
+                text-align: center;
+            }
+        
+            /* Ensure Lightbox close button is visible */
+            .lb-close {
+                font-size: 30px;
+                color: #fff;
+                top: 10px;
+                right: 10px;
+            }
+        </style>
+        
+        <script>
+            // Set up the lightbox options
+            lightbox.option({
+                'wrapAround': true, // Allow navigation through images
+                'albumLabel': "Certificate %1 of %2"
+            });
+        </script>
+        
+        
     
         <section id="about">
             <div class="container">
