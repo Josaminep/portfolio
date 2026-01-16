@@ -45,7 +45,7 @@ export default function Home() {
         transition={{ delay: 0.8, duration: 1.2, ease: "easeInOut" }}
         className="text-lg md:text-xl text-gray-800 dark:text-gray-300 mb-2 font-bold"
       >
-        Web Developer • Data Analyst • Remote Support
+        Junior Developer
       </motion.p>
 
       {/* Tagline */}
